@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>YouTube Player by Divzz</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container fade-slide-up">
+    <h1>YouTube Player By Divzz</h1>
+
+    <input type="text" id="youtubeLink" placeholder="Tempel link YouTube di sini..." />
+    <input type="number" id="startTime" placeholder="Mulai dari detik ke..." min="0" />
+
+    <div class="button-group">
+      <button onclick="previewThumbnail()">Preview</button>
+      <button onclick="playVideo()">Putar Video</button>
+      <button onclick="downloadVideo('mp4')">Download MP4</button>
+      <button onclick="downloadVideo('mp3')">Download MP3</button>
+    </div>
+
+    <div id="dropZone" class="drop-zone">
+      Atau tarik & lepas link YouTube ke sini
+    </div>
+
+    <div id="loading">🔄 Memuat info video...</div>
+    <div id="videoInfo" class="info"></div>
+    <div id="thumbnailPreview" class="thumbnail"></div>
+
+    <div class="player-wrapper">
+      <iframe id="youtubePlayer" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - Neon</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #0d0d0d, #111111);
+      font-family: 'Segoe UI', sans-serif;
+      color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-container {
+      background: #1a1a1a;
+      padding: 40px 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px #00fff2a0;
+      width: 100%;
+      max-width: 380px;
+      text-align: center;
+    }
+
+    h2 {
+      color: #00fff2;
+      text-shadow: 0 0 10px #00fff2aa;
+      margin-bottom: 25px;
+    }
+
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 10px;
+      background: #111;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      box-shadow: 0 0 8px #00fff2a0;
+      outline: none;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #00fff2;
+      color: #000;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      box-shadow: 0 0 15px #00fff2cc;
+      transition: background 0.3s ease;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background: #00e0d8;
+    }
+
+    .error {
+      color: #ff4d4d;
+      font-size: 0.9em;
+      margin-bottom: 10px;
+    }
+
+    .info-text {
+      font-size: 0.85em;
+      color: #aaa;
+      margin-top: 5px;
+      margin-bottom: 20px;
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-size: 0.8em;
+      color: #888;
+    }
+
+    .footer span {
+      opacity: 0.6;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>Enter Password</h2>
+    <div class="error" id="errorMsg"></div>
+    <input type="password" id="passwordInput" placeholder="Password" />
+    <div class="info-text">Mau password? Minta via WhatsApp atau Instagram</div>
+    <button onclick="checkPassword()">Login</button>
+    <div class="footer"><span>By Divzz</span></div>
+  </div>
+
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("passwordInput").value;
+      const errorMsg = document.getElementById("errorMsg");
+      const correctPassword = "123321"; // ubah sesuai keinginan
+
+      if (input === correctPassword) {
+        window.location.href = "index.html"; // halaman tujuan
+      } else {
+        errorMsg.textContent = "Wrong password. Try again.";
+      }
+    }
+  </script>
+
+</body>
+</html>
